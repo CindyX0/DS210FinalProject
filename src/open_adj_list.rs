@@ -5,5 +5,7 @@ pub fn adj_list(graph: &Vec<(usize, usize)>, num_nodes: usize) -> Vec<Vec<usize>
     for &(v, w) in graph {
         graph_list[v].push(w);
     }
-    graph_list
+    println!("completed creating adjacency list");
+    
+    return graph_list;
 }
