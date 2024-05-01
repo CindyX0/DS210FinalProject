@@ -21,6 +21,7 @@ pub fn read_file(filename: &str) -> Graph {
         let to: usize = iter.next().expect("Invalid input").parse().expect("Invalid input");
         edges.push((from, to));
     }
+    println!("Complete.");
     Graph { n, edges }
 }
 
