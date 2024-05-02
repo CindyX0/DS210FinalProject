@@ -9,6 +9,7 @@ pub fn sample_edges(graph: &Vec<(usize, usize)>, sample_size: usize) -> Vec<(usi
     shuffled_edges.shuffle(&mut rng);
     sampled_edges.extend(shuffled_edges.into_iter().take(sample_size));
 
-    println!("sampling in process"); //see if it works here
+    println!("sampling in process"); //see if it works here, aslso opted to keep this print statement in to see where program is.
+    println!("");
    return sampled_edges;
 }

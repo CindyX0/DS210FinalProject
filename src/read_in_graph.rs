@@ -2,12 +2,15 @@ use std::fs::File;
 use std::io::{BufRead, BufReader};
 
 
+//creating graph struct
 pub struct Graph {
     pub n: usize,
     pub edges: Vec<(usize, usize)>,
 }
 
+//reading file into graph
 
+//fail lines included to see where function fails at
 pub fn read_file(filename: &str) -> Graph {
     let file = File::open(filename).expect("File failed to open 1");
     let reader = BufReader::new(file);
@@ -22,7 +25,9 @@ pub fn read_file(filename: &str) -> Graph {
         edges.push((from, to));
     }
     println!("completed reading file into graph <3.");  // opted to write this statement so we know when the program finishes running
-
+    println!("");
+     
+     //returning graph with n and edges
     return Graph { n, edges };
 
 }
